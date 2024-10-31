@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Track"
         tools:targetApi="31">
         <activity
+            android:name=".AddNewWorkoutActivity"
+            android:exported="false" />
+        <activity
             android:name=".DefineExercises"
             android:exported="false" />
         <activity
