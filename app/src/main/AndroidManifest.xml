@@ -16,7 +16,7 @@
             android:name=".AddNewWorkoutActivity"
             android:exported="false" />
         <activity
-            android:name=".DefineExercises"
+            android:name=".DefineExercisesActivity"
             android:exported="false" />
         <activity
             android:name=".SignUpActivity"

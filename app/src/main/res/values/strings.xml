@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">track</string>
+
+    <string-array name="workout_options">
+        <item>meow</item>
+    </string-array>
 </resources>

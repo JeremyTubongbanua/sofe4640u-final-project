@@ -20,7 +20,7 @@ public class ExerciseDatabase extends SQLiteOpenHelper {
     private static final String TABLE_MUSCLE = "muscle";
     private static final String COLUMN_MUSCLE_ID = "muscle_id";
     private static final String COLUMN_MUSCLE_NAME = "muscle_name";
-    private static final String COLUMN_EXERCISE_REF_ID = "exercise_ref_id"; // Foreign key to link muscle to exercise
+    private static final String COLUMN_EXERCISE_REF_ID = "exercise_ref_id";
 
     public ExerciseDatabase(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -156,12 +156,10 @@ public class ExerciseDatabase extends SQLiteOpenHelper {
     }
 
     private void addExerciseWithMuscles(SQLiteDatabase db, String exerciseName, String[] muscles) {
-        // Insert the exercise
         ContentValues exerciseValues = new ContentValues();
         exerciseValues.put(COLUMN_EXERCISE_NAME, exerciseName);
         long exerciseId = db.insert(TABLE_EXERCISE, null, exerciseValues);
 
-        // Insert the muscles associated with the exercise
         if (exerciseId != -1) {
             for (String muscle : muscles) {
                 ContentValues muscleValues = new ContentValues();
